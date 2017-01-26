@@ -40,7 +40,7 @@ for epoch in xrange(10000):
 		# Output Layer forward prop
 		S1 = W1.T.dot(A0) + B1
 		
-		# This is an unnecessary assignment I'm includingfor illustration
+		# This is an unnecessary assignment I'm including for illustration
 		# purposes only. I'm using a linear output node which makes the
 		# activation function a no-op
 		A1 = S1
