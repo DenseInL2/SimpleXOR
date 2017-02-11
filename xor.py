@@ -25,14 +25,14 @@ W1 = 0.2 * ( 2.0 * np.random.random((3,1)) - 1.0 )
 B1 = np.zeros((1,1))
 
 # Training loop
-for epoch in xrange(10000):
+for epoch in range(10000):
 	dW0 = np.zeros((3,2))
 	dW1 = np.zeros((3,1))
 	dB0 = np.zeros((3,1))
 	dB1 = np.zeros((1,1))
 	
 	# Batch loop
-	for example in xrange(4):
+	for example in range(4):
 		# Hidden Layer forward prop
 		S0 = W0.dot(X[example]) + B0
 		A0 = np.tanh(S0)
@@ -67,12 +67,12 @@ for epoch in xrange(10000):
 	B0 += learn / batchSize * dB0
 	
 # Print the results for each example case
-for example in xrange(4):
+for example in range(4):
 	S0 = W0.dot(X[example]) + B0
 	A0 = np.tanh(S0)
 	S1 = W1.T.dot(A0) + B1
 	A1 = S1
-	print X[example].T[0],A1[0][0]
+	print (X[example].T[0],A1[0][0])
 		
 		
 
